@@ -1,9 +1,9 @@
 class HomeController < ApplicationController
   def index
-    @title = 'デイトラ'
+    @title = "デイトラ"
   end
 
   def about
-    render 'home/about'
+    render "home/about"
   end
 end

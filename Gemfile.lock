@@ -106,6 +106,8 @@ GEM
     drb (2.2.3)
     erb (6.0.2)
     erubi (1.13.1)
+    faker (3.6.0)
+      i18n (>= 1.8.11, < 2)
     ffi (1.17.3-aarch64-linux-gnu)
     ffi (1.17.3-aarch64-linux-musl)
     ffi (1.17.3-arm-linux-gnu)
@@ -347,6 +349,7 @@ DEPENDENCIES
   brakeman
   capybara
   debug
+  faker
   jbuilder
   jsbundling-rails
   puma (>= 5.0)

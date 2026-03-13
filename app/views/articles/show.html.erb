@@ -4,7 +4,7 @@
         <%= image_tag "default-avatar.png" %>
         <div>
             <p>userName</p>
-            <p>date</p>
+            <p><%= I18n.l(@article.created_at, format: :default) %></p>
         </div>
     </div>
     <div class="article_detail_actions">

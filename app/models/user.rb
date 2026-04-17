@@ -30,11 +30,11 @@ class User < ApplicationRecord
   delegate :age, :gender, to: :profile, allow_nil: true
 
   def has_written?(article)
-    articles.exist?(id: article.id)
+    articles.exists?(id: article.id)
   end
 
   def has_liked?(article)
-    likes.exist?(article_id: article.id)
+    likes.exists?(article_id: article.id)
   end
 
   def display_name

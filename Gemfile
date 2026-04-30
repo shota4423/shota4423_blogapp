@@ -51,7 +51,7 @@ gem 'devise'
 
 gem 'aws-sdk-s3', require: false
 
-gem 'webpacker', '~> 4.0', '>= 4.0.7'
+gem 'webpacker', '~> 5.4'
 
 gem 'psych', '~> 3.1'
 

@@ -39,6 +39,8 @@ gem 'importmap-rails'
 
 gem 'annotate'
 
+gem 'active_decorator'
+
 gem 'hamlit'
 
 gem 'better_errors'

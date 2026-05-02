@@ -10,7 +10,7 @@ import axios from "axios"
 
 window.$ = jquery
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('turbo:load', () => {
   $('.article_title').on('click', () => {
     axios.get('/')
       .then((response) => {

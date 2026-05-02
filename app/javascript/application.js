@@ -11,10 +11,10 @@ import axios from "axios"
 window.$ = jquery
 
 document.addEventListener('turbo:load', () => {
-  $('.article_title').on('click', () => {
-    axios.get('/')
+    const dataset = $('#article-show').data()
+    const articleId = dataset.articleId
+    axios.get(`/articles/${articleId}/like`)
       .then((response) => {
         console.log(response)
       })
-  })
 })

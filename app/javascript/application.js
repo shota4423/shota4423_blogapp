@@ -6,11 +6,15 @@ import "trix"
 import "@rails/actiontext"
 
 import { $ as jquery } from "jquery"
+import axios from "axios"
 
 window.$ = jquery
 
 document.addEventListener('DOMContentLoaded', () => {
   $('.article_title').on('click', () => {
-    window.alert('CLICKED')
+    axios.get('/')
+      .then((response) => {
+        console.log(response)
+      })
   })
 })

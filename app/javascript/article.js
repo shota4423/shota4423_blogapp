@@ -16,14 +16,30 @@ const handleHeartDisplay = (hasLiked) => {
 }
 
 document.addEventListener('turbo:load', () => {
-    if (!$('#article-show').length) return
-    const dataset = $('#article-show').data()
-    const articleId = dataset.articleId
-    axios.get(`/articles/${articleId}/like`)
-      .then((response) => {
-        const hasLiked = response.data.hasLiked
-        handleHeartDisplay(hasLiked)
+  if (!$('#article-show').length) return
+  const dataset = $('#article-show').data()
+  const articleId = dataset.articleId
+
+  axios.get(`/articles/${articleId}/comments`)
+    .then((response) => {
+      const comments = response.data
+      comments.forEach((comment) => {
+        $('.comments-container').append(
+          `<div class="article_comment"><p>${comment.content}</p></div>`
+        )
       })
+    })
+
+  $('.show-comment-form').on('click', () => {
+    $('.show-comment-form').addClass('hidden')
+    $('.comment-text-area').removeClass('hidden')
+  })
+
+  axios.get(`/articles/${articleId}/like`)
+    .then((response) => {
+      const hasLiked = response.data.hasLiked
+      handleHeartDisplay(hasLiked)
+    })
 
   $('.inactive-heart').on('click', () => {
     axios.post(`/articles/${articleId}/like`)

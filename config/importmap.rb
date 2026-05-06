@@ -7,3 +7,7 @@ pin '@hotwired/stimulus-loading', to: 'stimulus-loading.js'
 pin_all_from 'app/javascript/controllers', under: 'controllers'
 pin "trix"
 pin "@rails/actiontext", to: "actiontext.esm.js"
+pin "jquery", to: "https://esm.sh/jquery@4.0.0"
+pin "axios", to: "https://esm.sh/axios"
+pin "@rails/ujs", to: "@rails--ujs.js" # @7.1.3
+pin "article"

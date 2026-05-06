@@ -11,3 +11,4 @@ pin "jquery", to: "https://esm.sh/jquery@4.0.0"
 pin "axios", to: "https://esm.sh/axios"
 pin "@rails/ujs", to: "@rails--ujs.js" # @7.1.3
 pin "article"
+pin_all_from "app/javascript/modules", under: "modules"

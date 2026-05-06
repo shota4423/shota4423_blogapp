@@ -1,14 +1,10 @@
 import { $ as jquery } from "jquery"
-import axios from "axios"
-import Rails from "@rails/ujs"
+import axios from "./modules/axios"
+window.$ = jquery
 import {
   listenInactiveHeartEvent,
   listenActiveHeartEvent
 } from './modules/handle_heart'
-
-axios.defaults.headers.common['X-CSRF-Token'] = Rails.csrfToken()
-
-window.$ = jquery
 
 const handleHeartDisplay = (hasLiked) => {
   if (hasLiked) {

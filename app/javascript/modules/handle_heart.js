@@ -1,10 +1,5 @@
 import { $ as jquery } from "jquery"
-import axios from "axios"
-import Rails from "@rails/ujs"
-
-axios.defaults.headers.common['X-CSRF-Token'] = Rails.csrfToken()
-
-window.$ = jquery
+import axios from "./axios"
 
 const listenInactiveHeartEvent = (articleId) => {
   $('.inactive-heart').on('click', () => {

@@ -53,8 +53,6 @@ gem 'devise'
 
 gem 'aws-sdk-s3', require: false
 
-gem 'webpacker', '~> 4.0', '>= 4.0.7'
-
 gem 'psych', '~> 3.1'
 
 group :development, :test do

@@ -1,5 +1,5 @@
 import { $ as jquery } from "jquery"
-import axios from "./axios"
+import axios from "modules/axios"
 
 const listenInactiveHeartEvent = (articleId) => {
   $('.inactive-heart').on('click', () => {

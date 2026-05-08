@@ -65,6 +65,8 @@ group :development, :test do
   gem 'pry-byebug'
   gem 'rubocop-rails'
   gem 'dotenv-rails'
+  gem 'letter_opener'
+  gem 'letter_opener_web', '~> 3.0'
 
 end
 

@@ -18,7 +18,6 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   root to: 'articles#index'
-  resource :timeline, only: [:show]
 
   resources :articles
 
@@ -27,8 +26,11 @@ Rails.application.routes.draw do
     resources :unfollows, only: [:create]
   end
 
-  resource :profile, only: [:show, :edit, :update]
-  resources :favorites, only: [:index]
+  scope module: :apps do
+    resources :favorites, only: [:index]
+    resource :profile, only: [:show, :edit, :update]
+    resource :timeline, only: [:show]
+  end
 
   namespace :api, default: { format: :json } do
     scope '/articles/:article_id' do

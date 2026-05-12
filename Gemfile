@@ -53,7 +53,7 @@ gem 'devise'
 
 gem 'aws-sdk-s3', require: false
 
-gem 'psych', '~> 3.1'
+gem 'psych', '~> 5.3'
 
 gem 'sidekiq'
 
